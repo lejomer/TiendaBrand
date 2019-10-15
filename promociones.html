@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Brand.com │ El Supermercado de Bogotá Online. ¡Haz tu compra ya</title>
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/estilos.css" />
+
+</head>
+
+<body class="">
+
+
+    <!-- aqui comienza el Nav-Bar-->
+    <div class="nav-bar">
+        <div class="bg-primary" style="padding: 8px 0;">
+            <div class="flex__wrap">
+                <div class="row middle-xs">
+                    <div class="logo-search-bar col-xs-5 middle-xs col-sm-3 col-md">
+                        <a class="js-burger | d-hide" href="promociones.html" title="Brand el supermercado de toda la vida">
+                            <i class="md-icon icon-md_burger" style="margin: 4px 8px 0 0;"></i>
+                        </a>
+                        <a href="index.html">
+                            <div class="header__logo"></div>
+                        </a>
+                        <form class="suggested-search | js-search-form js-pjax | m-hide t-hide large-mobile-hide desktop" method="get" action="/busca" id="desktopSearch">
+                            <label class="suggested-search__label | form--inline | search-label" for="main-search">
+                                        <i class="md-icon | icon--md_search-black"></i>
+                                    </label>
+                            <input class="suggested-search__input | js-search-query ac_input" type="text" name="q" value="" placeholder="Buscar" autocomplete="off" autocorrect="off" id="main-search">
+                            <button class="suggested-search__button | btn btn--small | m-hide t-hide large-mobile-hide desktop | t-hide | m-hide | large-mobile-hide">Buscar</button>
+                            <button class="suggested-search__button suggested-search__button--close | btn btn--small | d-hide dw-hide is-hidden | js-search-close">Cerrar</button>
+                        </form>
+                        <div class="suggested-search-results | container-white | js-suggested-search is-hidden"></div>
+                    </div>
+                    <div class="header-bar col-xs col-sm col-md">
+                        <div class="nav-item m-hide | large-mobile-hide">
+                            <a class="js-pjax | js-track-ui" href="promociones.html" data-tracking-action="promos_click" data-tracking-label="promos_desktop_header" title="Comprar productos en promoción">
+                                <i class="md-icon | icon--md_local_offer-white"></i>
+                                <span class="nav-item-label">Ofertas</span>
+                            </a>
+                        </div>
+                        <div class="nav-item | d-hide t-hide dw-hide | js-search-toggle | is-hidden">
+                            <a class="js-pjax | js-track-ui" title="Buscar">
+                                <i class="md-icon | icon--md_search-white icon--muted"></i>
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <div class="dropdown | js-dropdown">
+                                <a class="dropdown__toggle | js-dropdown-toggle" href="login.html" title="Regístrate o Accede a tu cuenta">
+                                    <i class="md-icon | icon--md_account_circle-white"></i>
+                                    <span class="nav-item-label m-hide | large-mobile-hide">Acceso</span>
+                                </a>
+
+                            </div>
+                        </div>
+                        <div class="nav-item js-cart-mini-link no-border" id="cart-mini">
+                            <i class="md-icon | icon--md_shopping_cart-white"></i>
+                            <span class="js-cart-mini-subtotal | js-cart-mini-info-subtotal | accent">$ 128.050</span>
+                        </div>
+                        <div class="nav-item | cta | large-mobile-hide">
+                            <a id="cart-mini-link" class="js-checkout" href="#" rel="nofollow">Mi Bolsa</a>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- aqui empieza el Sub-Menú -->
+    <nav class="container-nav">
+        <ul class="main-menu" style="background-color: #26486f">
+            <li><a href="#">Fresco</a></li>
+            <li><a href="#">Refigerado</a></li>
+            <li><a href="#">Alimentos</a></li>
+            <li><a href="#">Bebidas</a></li>
+            <li><a href="#">Básicos de la Casa</a></li>
+            <li><a href="#">Higiene y Belleza</a></li>
+            <li><a href="#">Bebé</a></li>
+            <li><a href="#">Farmacia</a></li>
+            <li class="no-border"><a href="#">Mascotas</a></li>
+        </ul>
+    </nav>
+    <!-- aqui finaliza el Sub-Menú -->
+    <!-- aqui finaliza el Nav-Bar -->
+
+
+
+
+
+
+    <div class="pjax-container js-pjax-container" id="pjax-container">
+        <div class="flex__wrap">
+            <div class="col-xs-10 col-xs-offset-1">
+                <div class="row around-xs">
+                    <div class="col-md-4 col-xs-12 value-proposition-container js-open-modal" data-modal-url="/modal/slots-info">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <img src="img/truck.svg" alt="Camión" class="value-proposition-icon">
+                            </div>
+                            <div class="col-xs-9 value-description">
+                                <div>
+                                    <div class="value-title">Envío GRATIS</div>
+                                    <div class="value-claim">a partir de $30.000 mil en compras</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xs-12 value-proposition-container js-open-modal" data-modal-url="/modal/slots-info">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <img src="img/icon-clock.svg" alt="Reloj" class="value-proposition-icon">
+                            </div>
+                            <div class="col-xs-9 value-description">
+                                <div>
+                                    <div class="value-title">Entregamos de&nbsp;7&nbsp;a.m.&nbsp;a&nbsp;10&nbsp;p.m.</div>
+                                    <div class="value-claim">de nuestro súper a tu casa.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xs-12 value-proposition-container">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <img src="img/icon-offer.svg" alt="Ofertas" class="value-proposition-icon">
+                            </div>
+                            <div class="col-xs-9 value-description">
+                                <a href="#" class="unlink">
+                                    <div>
+                                        <div class="value-title">+5.000 Ofertas</div>
+                                        <div class="value-claim">visita nuestras promos</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex__wrap │ container-white │ clear-fix dw-margin-trailer-2 d-margin-trailer-2 t-margin-trailer-2">
+            <div class="flex_wrapper">
+                <div class="soft--bottom">
+                    <header class="container-white │ islet │ flexbox │ border--bottom">
+                        <span class="flexbox__item">
+                        <h1 class="brand-face │ delta │ base-line-height │ flush--bottom │ text--center │ soft--ends">Todas nuestras promociones</h1>
+                     </span>
+                    </header>
+                </div>
+                <div>
+                    <ul class="row">
+                        <li class="promo--item col-xs-12 col-sm-6 col-md-4 unlist">
+                            <div>
+                                <a href="#" data-id="128974" data-name="Outlet festival de ofertas" data-position="1">
+                                    <picture>
+                                        <img src="img/media/128974_banner.jpg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="promo--item col-xs-12 col-sm-6 col-md-4 unlist">
+                            <div>
+                                <a href="campaign/outlet-brand.html" data-id="101803" data-name="Outlet festival de ofertas" data-position="2">
+                                    <picture>
+                                        <img src="img/media/101803_banner.jpg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="promo--item col-xs-12 col-sm-6 col-md-4 unlist">
+                            <div>
+                                <a href="#" data-id="116503" data-name="Outlet festival de ofertas" data-position="3">
+                                    <picture>
+                                        <img src="img/media/116503_banner.jpg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="promo--item col-xs-12 col-sm-6 col-md-4 unlist">
+                            <div>
+                                <a href="#" data-id="117681" data-name="Outlet festival de ofertas" data-position="4">
+                                    <picture>
+                                        <img src="img/media/117681_banner.jpg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="promo--item col-xs-12 col-sm-6 col-md-4 unlist">
+                            <div>
+                                <a href="#" data-id="118206" data-name="Outlet festival de ofertas" data-position="5">
+                                    <picture>
+                                        <img src="img/media/118206_banner.jpg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="promo--item col-xs-12 col-sm-6 col-md-4 unlist">
+                            <div>
+                                <a href="#" data-id="120569" data-name="Outlet festival de ofertas" data-position="6">
+                                    <picture>
+                                        <img src="img/media/120569_banner.jpg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="promo--item col-xs-12 col-sm-6 col-md-4 unlist">
+                            <div>
+                                <a href="#" data-id="120722" data-name="Outlet festival de ofertas" data-position="7">
+                                    <picture>
+                                        <img src="img/media/120722_banner.jpg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="promo--item col-xs-12 col-sm-6 col-md-4 unlist">
+                            <div>
+                                <a href="#" data-id="122059" data-name="Outlet festival de ofertas" data-position="8">
+                                    <picture>
+                                        <img src="img/media/122059_banner.jpg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="promo--item col-xs-12 col-sm-6 col-md-4 unlist">
+                            <div>
+                                <a href="#" data-id="124242" data-name="Outlet festival de ofertas" data-position="9">
+                                    <picture>
+                                        <img src="img/media/124242_banner.jpg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="promo--item col-xs-12 col-sm-6 col-md-4 unlist">
+                            <div>
+                                <a href="#" data-id="124426" data-name="Outlet festival de ofertas" data-position="10">
+                                    <picture>
+                                        <img src="img/media/124426_banner.jpg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="promo--item col-xs-12 col-sm-6 col-md-4 unlist">
+                            <div>
+                                <a href="#" data-id="125524" data-name="Outlet festival de ofertas" data-position="11">
+                                    <picture>
+                                        <img src="img/media/125524_banner.jpg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="promo--item col-xs-12 col-sm-6 col-md-4 unlist">
+                            <div>
+                                <a href="#" data-id="127787" data-name="Outlet festival de ofertas" data-position="12">
+                                    <picture>
+                                        <img src="img/media/127787_banner.jpg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="promo--item col-xs-12 col-sm-6 col-md-4 unlist">
+                            <div>
+                                <a href="#" data-id="127805" data-name="Outlet festival de ofertas" data-position="13">
+                                    <picture>
+                                        <img src="img/media/127805_banner.jpg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="promo--item col-xs-12 col-sm-6 col-md-4 unlist">
+                            <div>
+                                <a href="#" data-id="127972" data-name="Outlet festival de ofertas" data-position="14">
+                                    <picture>
+                                        <img src="img/media/127972_banner.jpg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="promo--item col-xs-12 col-sm-6 col-md-4 unlist">
+                            <div>
+                                <a href="#" data-id="128422" data-name="Outlet festival de ofertas" data-position="15">
+                                    <picture>
+                                        <img src="img/media/128422_banner.jpg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="promo--item col-xs-12 col-sm-6 col-md-4 unlist">
+                            <div>
+                                <a href="#" data-id="128634" data-name="Outlet festival de ofertas" data-position="16">
+                                    <picture>
+                                        <img src="img/media/128634_banner.jpg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="promo--item col-xs-12 col-sm-6 col-md-4 unlist">
+                            <div>
+                                <a href="#" data-id="128640" data-name="Outlet festival de ofertas" data-position="17">
+                                    <picture>
+                                        <img src="img/media/128640_banner.jpg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="promo--item col-xs-12 col-sm-6 col-md-4 unlist">
+                            <div>
+                                <a href="#" data-id="128664" data-name="Outlet festival de ofertas" data-position="18">
+                                    <picture>
+                                        <img src="img/media/128664_banner.jpg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="promo--item col-xs-12 col-sm-6 col-md-4 unlist">
+                            <div>
+                                <a href="#" data-id="128673" data-name="Outlet festival de ofertas" data-position="19">
+                                    <picture>
+                                        <img src="img/media/128673_banner.jpg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="promo--item col-xs-12 col-sm-6 col-md-4 unlist">
+                            <div>
+                                <a href="#" data-id="128800" data-name="Outlet festival de ofertas" data-position="20">
+                                    <picture>
+                                        <img src="img/media/128800_banner.jpg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="promo--item col-xs-12 col-sm-6 col-md-4 unlist">
+                            <div>
+                                <a href="#" data-id="128804" data-name="Outlet festival de ofertas" data-position="21">
+                                    <picture>
+                                        <img src="img/media/128804_banner.jpg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="promo--item col-xs-12 col-sm-6 col-md-4 unlist">
+                            <div>
+                                <a href="#" data-id="128904" data-name="Outlet festival de ofertas" data-position="22">
+                                    <picture>
+                                        <img src="img/media/128904_banner.jpg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="promo--item col-xs-12 col-sm-6 col-md-4 unlist">
+                            <div>
+                                <a href="#" data-id="128923" data-name="Outlet festival de ofertas" data-position="23">
+                                    <picture>
+                                        <img src="img/media/128923_banner.jpg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="promo--item col-xs-12 col-sm-6 col-md-4 unlist">
+                            <div>
+                                <a href="#" data-id="128978" data-name="Outlet festival de ofertas" data-position="24">
+                                    <picture>
+                                        <img src="img/media/128978_banner.jpg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="promo--item col-xs-12 col-sm-6 col-md-4 unlist">
+                            <div>
+                                <a href="#" data-id="128996" data-name="Outlet festival de ofertas" data-position="25">
+                                    <picture>
+                                        <img src="img/media/128996_banner.jpg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="promo--item col-xs-12 col-sm-6 col-md-4 unlist">
+                            <div>
+                                <a href="#" data-id="129089" data-name="Outlet festival de ofertas" data-position="26">
+                                    <picture>
+                                        <img src="img/media/129089_banner.jpg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="promo--item col-xs-12 col-sm-6 col-md-4 unlist">
+                            <div>
+                                <a href="#" data-id="129099" data-name="Outlet festival de ofertas" data-position="27">
+                                    <picture>
+                                        <img src="img/media/129099_banner.jpg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="promo--item col-xs-12 col-sm-6 col-md-4 unlist">
+                            <div>
+                                <a href="#" data-id="129141" data-name="Outlet festival de ofertas" data-position="28">
+                                    <picture>
+                                        <img src="img/media/129141_banner.jpg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="promo--item col-xs-12 col-sm-6 col-md-4 unlist">
+                            <div>
+                                <a href="#" data-id="129151" data-name="Outlet festival de ofertas" data-position="29">
+                                    <picture>
+                                        <img src="img/media/129151_banner.jpg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="promo--item col-xs-12 col-sm-6 col-md-4 unlist">
+                            <div>
+                                <a href="#" data-id="129187" data-name="Outlet festival de ofertas" data-position="30">
+                                    <picture>
+                                        <img src="img/media/129187_banner.jpg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="promo--item col-xs-12 col-sm-6 col-md-4 unlist">
+                            <div>
+                                <a href="#" data-id="129199" data-name="Outlet festival de ofertas" data-position="31">
+                                    <picture>
+                                        <img src="img/media/129199_banner.jpg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="promo--item col-xs-12 col-sm-6 col-md-4 unlist">
+                            <div>
+                                <a href="#" data-id="129213" data-name="Outlet festival de ofertas" data-position="32">
+                                    <picture>
+                                        <img src="img/media/129213_banner.jpg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="promo--item col-xs-12 col-sm-6 col-md-4 unlist">
+                            <div>
+                                <a href="#" data-id="129225" data-name="Outlet festival de ofertas" data-position="33">
+                                    <picture>
+                                        <img src="img/media/129225_banner.jpg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="promo--item col-xs-12 col-sm-6 col-md-4 unlist">
+                            <div>
+                                <a href="#" data-id="129230" data-name="Outlet festival de ofertas" data-position="34">
+                                    <picture>
+                                        <img src="img/media/129230_banner.jpg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="promo--item col-xs-12 col-sm-6 col-md-4 unlist">
+                            <div>
+                                <a href="#" data-id="129351" data-name="Outlet festival de ofertas" data-position="35">
+                                    <picture>
+                                        <img src="img/media/129351_banner.jpg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="promo--item col-xs-12 col-sm-6 col-md-4 unlist">
+                            <div>
+                                <a href="#" data-id="129392" data-name="Outlet festival de ofertas" data-position="36">
+                                    <picture>
+                                        <img src="img/media/129392_banner.jpg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="promo--item col-xs-12 col-sm-6 col-md-4 unlist">
+                            <div>
+                                <a href="#" data-id="129400" data-name="Outlet festival de ofertas" data-position="37">
+                                    <picture>
+                                        <img src="img/media/129400_banner.jpg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <footer class="main-footer  | print--hidden">
+        <div class="flex__wrap push--bottom">
+            <div class="secure-badges nav nav--banner row center-xs middle-xs">
+                <div class="nauru col-xs-2">
+                    <a href="#" target="_blank" rel="nofollow noopener noreferrer">
+                        <i class="s s--badge-selligent"></i>
+                    </a>
+                </div>
+                <div class="nauru col-xs-2">
+                    <i class="s s--badge-secure-payment"></i>
+                </div>
+                <div class="nauru col-xs-2">
+                    <a href="#" target="_blank" rel="nofollow noopener noreferrer">
+                        <i class="s s--badge-confianza-online"></i>
+                    </a>
+                </div>
+                <div class="nauru col-xs-2"><i class="s s--badge-paypal-2"></i></div>
+                <div class="nauru col-xs-2"><i class="s s--badge-verified-by-visa"></i></div>
+                <div class="nauru col-xs-2"><i class="s s--badge-mastercard-secure"></i></div>
+            </div>
+        </div>
+
+        <div class="download-app | soft--top">
+            <div class="flex__wrap">
+                <div class="row middle-xs">
+                    <div class="col-xs-12 last-xs first-sm col-sm-6 center-xs">
+                        <img class="app-mockup" src="img/footer-app-mockup.png">
+                    </div>
+                    <div class="col-xs-12 first-xs last-sm col-sm-6 center-xs start-sm">
+                        <h4 class="download-app-claim">Descárgate nuestra app</h4>
+                        <ul class="nav">
+                            <li class="nauru">
+                                <a href="#" rel="nofollow" title="Descárgate la app de brand para iOS" target="blank"><img src="img/badge/appstore.svg" alt="Descárgate la app de brand para iOS"></a>
+                            </li>
+                            <li class="nauru">
+                                <a href="#" rel="nofollow" title="Descárgate la app de brand para Android" target="blank"><img src="img/badge/playstore.svg" alt="Descárgate la app de brand para Android"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="soft--ends bg-dark-grey">
+            <div class="flex__wrap">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-3">
+                        <h3 class="main-footer-title">Atención al cliente</h3>
+                        <ul class="unlist | milli">
+                            <li>Llámanos: <a class="face-bold" href="#" title="Llamar al número de teléfono de Brand.com: 800 472 222">800 472 222</a></li>
+                            <li><a class="js-pjax" href="#" rel="nofollow" title="Preguntas frecuentes">Preguntas frecuentes</a></li>
+                            <li><a class="js-pjax" href="#" rel="nofollow" title="Contacto">Contacto</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-3">
+                        <h3 class="main-footer-title">Acerca de Brand</h3>
+                        <ul class="unlist | milli">
+                            <li><a class="js-pjax" href="#" rel="nofollow">Qué es Brand</a></li>
+                            <li><a class="js-pjax" href="#" rel="nofollow">Dónde repartimos</a></li>
+                            <li><a class="js-pjax" href="#" rel="nofollow">Cuándo repartimos</a></li>
+                            <li><a class="js-pjax" href="#" rel="nofollow">Quiénes somos</a></li>
+                            <li><a class="js-pjax" href="#" title="Mapa del sitio">Mapa del sitio</a></li>
+                            <li><a class="js-pjax" href="/marca" title="Marcas">Marcas</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-3">
+                        <h3 class="main-footer-title">Comunidad</h3>
+                        <ul class="unlist | milli">
+                            <li><a href="#" title="El blog de brand, el supermercado online">Brandblog</a></li>
+                            <li><a target="#" href="#" rel="#">Twitter</a></li>
+                            <li><a target="_blank" href="#" rel="#">Facebook</a></li>
+                            <li><a target="#" href="#" rel="#">Instagram</a></li>
+                            <li><a href="#" title="Sala de prensa">Sala de prensa</a></li>
+                            <li><a class="js-pjax" href="#" rel="nofollow" title="Empleo">Empleo</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-3">
+                        <h3 class="main-footer-title">Legal</h3>
+                        <ul class="unlist | milli">
+                            <li><a class="js-pjax" href="#" rel="nofollow" title="Política de privacidad">Política de privacidad</a></li>
+                            <li><a class="js-pjax" href="#d" rel="nofollow" title="Centro de privacidad">Centro de privacidad</a></li>
+                            <li><a class="js-pjax" href="#" rel="nofollow" title="Política de cookies">Política de cookies</a></li>
+                            <li><a class="js-pjax" href="#" rel="nofollow" title="Términos y condiciones">Términos y condiciones</a></li>
+                        </ul>
+                        <div>
+                            <h3 class="main-footer-title">Selecciona tu idioma</h3>
+                            <nav class="nav unlist">
+                                <li>
+                                    <span class="islet | face-bold">
+                                                  Español
+                                        </span>
+                                </li>
+                                <li>|</li>
+                                <li>
+                                    <a rel="nofollow" class="islet | js-track-ui js-available-locale" href="/?hl=en" data-tracking-action="language-toogle-footer" data-tracking-label="en" data-locale="en">
+                                                English
+                                       </a>
+                                </li>
+                                <li>|</li>
+                                <li>
+                                    <a rel="nofollow" class="islet | js-track-ui js-available-locale" href="/?hl=po" data-tracking-action="language-toogle-footer" data-tracking-label="po" data-locale="po">
+                                            portugués
+                                         </a>
+                                </li>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/myscript.js"></script>
+</body>
+
+</html>
